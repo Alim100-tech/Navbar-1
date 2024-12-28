@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+   *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    text-decoration: none;
+   }
+   body{
+    height: 2000px;
+    min-height: 100vh;
+    background-color: rgb(16, 77, 112);
+   }
+   nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 10px 30px;
+    background-color: rgb(18, 66, 223);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; 
+    }
+    nav ul li{
+      padding: 20px;
+    }
+    nav ul li a{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    nav ul li a:hover{
+      color: rgb(13, 14, 12);
+    }
+   .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+   }
+   .menu-icon{
+    display: none;
+   }
+   .menu-icon ,i{
+    color: #fff;
+    font-size: 32px;
+   }
+   @media (max-width:668px) {
+        nav ul{
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: center;
+          background-color: rgb(37, 39, 172);
+          gap: 0;
+          overflow: hidden;
+        }
+        nav ul li{
+          padding: 20px;
+        }
+        .menu-icon{
+          display: block;
+        }
+   }
+   section{
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+    height: 700px;
+   }
+   iframe{
+    border-radius: 20px;
+   }
+   .btn{
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+   }
+   .btn:hover{
+    background-color: #fff;
+    color: black;
+   }
+   .social a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: .5s;
+   }
+   .social a:hover{
+    
+    color: #000;
+    box-shadow: 0 0 10px #fff;
+    transform: rotate(360deg);
+   }
+
+    .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      
+    }
+    .content .left{
+      width: 50%;
+      padding: 20px;
+    }
+    .content .right{
+      width: 50%;
+    }
+    button{
+      padding: 10px 20px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+   </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+  <h1>Logo</h1>
+    </div>
+    
+    <ul id="menuList">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="" class="btn">Sign Up</a></li>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+   </nav>
+   <script>
+    let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight = "0px";
+
+    function toggleMenu(){
+      if(menuList.style.maxHeight == "0px")
+    {
+      menuList.style.maxHeight = "300px";
+    }
+    else{
+      menuList.style.maxHeight = "0px";
+    }
+    }
+   
+   </script>
+  <script src="https://kit.fontawesome.com/98db174248.js" crossorigin="anonymous"></script>
+
+  <div class="content">
+  <div class="left">
+  <h1>Welcome</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna 
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+    ullamco laboris nisi ut</p>
+    <button class="btn">Subdctibe</button>
+  </div>
+  <div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gCNeDWCI0vo?si=eHVWR4y2cCsohrJ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div> 
+  
+</body>
+</html>
